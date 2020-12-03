@@ -1,9 +1,6 @@
 from shop_list import shopping_list 
 
 
-
-
-
 def main():
   # Program Variables
 
@@ -46,14 +43,18 @@ def option2():
     new_price = int(input("\nPlease type the price of the item you wish to add: $"))
     amount = int(input("\nHow many of that item would you like: "))
     product = [new_item, new_price, amount]
+    dont_add = False
 
-    if shopping_list.count(product) == 0:
-        shopping_list.append(product)
-    elif shopping_list.count(product) >= 1:
-        print("item is in list already")
-        
-        
-       
+    for items in shopping_list:
+      if items[0] == new_item:
+        items[2] += amount 
+        dont_add = True 
+        break
+
+    if dont_add == False:
+      shopping_list.append(product)
+   
+    
 
 def option3():
     print("\nYour total price is: ")
@@ -65,4 +66,9 @@ def option3():
     print("")
     print(total)
     print("\nyour total number of items is: " + str(num_items))
-# Call main to begin program
+
+      
+
+
+
+
