@@ -34,15 +34,14 @@ def getMenuSelection():
   print("5: Exit")
   return input("Enter menu selection:")
 
-
+#view list function-------------------------------------------------------------------
 def option1():
     print("\nShopping list-------------------------------------------------------")
     for items in shopping_list:
       print(items)
     print("----------------------------------------------------------------------")
       
-
-
+#adding an item function--------------------------------------------------------------
 def option2():
   new_item = input("\nPlease type the item you wish to add to the list: ").lower()
   new_price = int(input("\nPlease type the price of the item you wish to add: $"))
@@ -50,8 +49,8 @@ def option2():
   
 
   add_to_cart(new_item, new_price, amount)
-    
 
+#removing item function---------------------------------------------------------------
 def option3():
   old_item = input("\nPlease type the item you wish to remove: ").lower()
   old_price = int(input("\nPlease type the price of the item you wish to remove: $"))
@@ -59,6 +58,7 @@ def option3():
   
   remove_from_cart(old_item, old_price, amount)
 
+#total function-----------------------------------------------------------------------
 def option4():
   print("\nYour total price is: ")
   total = 0
@@ -70,8 +70,7 @@ def option4():
   print(total)
   print("\nyour total number of items is: " + str(num_items))
 
-      
-
+#global function---------------------------------------------------------------------
 def add_to_cart(item, price, amount):
 
   for items in shopping_list:
