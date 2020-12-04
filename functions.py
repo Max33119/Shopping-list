@@ -27,10 +27,10 @@ def main():
 
 def getMenuSelection():
   print("\nMAIN MENU")
-  print("1: Option 1")
-  print("2: Option 2")
-  print("3: Option 3")
-  print("4: Option 4")
+  print("1: View Shopping list")
+  print("2: Add to shopping list")
+  print("3: Remove from shopping list")
+  print("4: Total price and number of items")
   print("5: Exit")
   return input("Enter menu selection:")
 
